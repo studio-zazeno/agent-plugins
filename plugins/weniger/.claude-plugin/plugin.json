@@ -1,0 +1,17 @@
+{
+  "name": "weniger",
+  "description": "Gives a site the Dieter Rams treatment: 20 principles for purpose, depth, measure, colour and motion, plus tokens for light and dark",
+  "version": "0.5.1",
+  "author": {
+    "name": "studio zazeno",
+    "url": "https://zazeno.com"
+  },
+  "homepage": "https://zazeno.com/weniger/",
+  "keywords": [
+    "ui",
+    "design",
+    "dieter-rams",
+    "tokens"
+  ],
+  "license": "CC-BY-ND-4.0"
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "zazeno",
+  "description": "Plugins and skills by studio zazeno",
+  "owner": {
+    "name": "studio zazeno",
+    "url": "https://zazeno.com"
+  },
+  "plugins": [
+    {
+      "name": "weniger",
+      "source": "./plugins/weniger",
+      "description": "Gives a site the Dieter Rams treatment: 20 principles for purpose, depth, measure, colour and motion, plus tokens for light and dark",
+      "category": "design"
+    },
+    {
+      "name": "lgtu",
+      "source": "./plugins/lgtu",
+      "description": "A senior product designer's review of what you or your agent built, before you ship it, ending with a verdict",
+      "category": "design"
+    }
+  ]
+}

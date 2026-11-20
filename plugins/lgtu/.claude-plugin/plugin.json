@@ -1,0 +1,17 @@
+{
+  "name": "lgtu",
+  "description": "A senior product designer's review of what you or your agent built, before you ship it, ending with a verdict",
+  "version": "0.3.0",
+  "author": {
+    "name": "studio zazeno",
+    "url": "https://zazeno.com"
+  },
+  "homepage": "https://zazeno.com/lgtu/",
+  "keywords": [
+    "ux",
+    "design-review",
+    "product-design",
+    "review"
+  ],
+  "license": "CC-BY-ND-4.0"
+}
