@@ -28,4 +28,4 @@ npx skills add studio-zazeno/agent-plugins
 
 ## License
 
-Skills (everything under `plugins/*/skills/`): © 2026 studio zazeno, [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Use them, also at work, and share them unchanged with credit and a link to zazeno.com. Everything else: MIT. See `LICENSE`.
+Skills (everything under `plugins/*/skills/`): © 2026 studio zazeno, [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/). Use them, also at work, and share them unchanged with credit and a link to zazeno.com. The `DESIGN.md` template that comes with Weniger is the exception: CC0, yours to change. Everything else: MIT. See `LICENSE`.

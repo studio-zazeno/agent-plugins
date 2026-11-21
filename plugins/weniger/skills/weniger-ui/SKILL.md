@@ -3,7 +3,7 @@ name: weniger-ui
 description: Use when the user wants their site, app or screen in the style of Dieter Rams, or asks for Weniger. Reworks an existing interface (or builds a new one) with 20 principles for purpose, depth, measure, colour and motion, plus tokens for light and dark.
 ---
 
-# Weniger UI (v0.5)
+# Weniger UI (v0.6)
 
 Weniger gives a site the look of a Dieter Rams product: warm greys, controls you can feel, one accent, and nothing placed by accident. The name is half of his motto, "Weniger, aber besser": less, but better. The approach is honest, quiet and thorough down to the last detail. Nothing is on screen without a reason, and every pixel is decided.
 
@@ -15,11 +15,11 @@ Naming: say "inspired by Dieter Rams". Never use the Braun name or logo in a pro
 
 ### Reworking an existing site (the usual case)
 
-1. Take stock. Read the styles and the shared components before touching anything. List the pages, the components in use, and the current colours, type sizes, radii, shadows and motion. Note the brand accent and typeface if the site has them.
+1. Take stock. Read the styles and the shared components before touching anything. List the pages, the components in use, and the current colours, type sizes, radii, shadows and motion. Note the brand accent and typeface if the site has them. Look for a `DESIGN.md` in the project: if there is one, it is the bar your work is scored against. If there is none, offer to add the template that comes with this skill (`DESIGN.md`, next to this file); add it only when the user agrees.
 2. Tokens first. Define colour, radius, shadow and motion tokens for light and dark (see "Token starter"). Keep the site's brand accent as `--accent` if it has one; otherwise use the starter's orange.
 3. Rework the shared layer: base styles, buttons, fields, cards, navigation. Most of the site changes here.
 4. Go through the pages one by one and rework what the shared layer did not reach.
-5. Check your own work against the 20 principles, one by one. Fix what fails before you show anything.
+5. Have it scored by someone who did not build it (see "Review"). Fix what scores below 4 and have it scored again, at most three rounds, before you show anything.
 6. Report back (see "Report" at the end).
 
 Leave alone, unless the user asks otherwise: copy, content, images, the logo, page structure, navigation items, routes, links and behaviour. If a principle cannot be met without changing one of these, say so in the report and do not change it.
@@ -28,7 +28,7 @@ On a large site, do steps 1 to 3 and one page, show that, and ask before going t
 
 ### Building something new
 
-Start at step 2: tokens, then the component or screen, then the check and the report.
+Start at step 2: tokens, then the component or screen, then the review and the report.
 
 If the user's brand needs another accent, ground colour or typeface, change the tokens. The principles stay.
 
@@ -172,11 +172,20 @@ Give each kind of control its own voice, by what it is for. A large or weighty c
 
 One grid, 70 px rows, 12 px gap. Make the board a container and switch columns with container queries: 12 columns from 1360 px, 6 from 700 px, 2 below. Place every tile explicitly per layout with CSS variables, so nothing reflows by accident. Keep the same row span across layouts.
 
+## Review
+
+An agent that checks its own work tends to approve it. So the check is done by a separate reviewer, against the five criteria in `DESIGN.md` (the project's own, or the template next to this file).
+
+- **Who:** if you can start a subagent, start a fresh one. Give it `DESIGN.md` and the address of the built page, nothing else: not your notes, not your reasoning, not what you hoped to achieve. If you cannot, do a separate pass after the build, with only `DESIGN.md` and the page in front of you, and say in the report that the review was not independent.
+- **How:** in a browser, at 390, 768 and 1280 px, light and dark. Score purpose, depth, measure, colour and motion from 1 to 5, each with evidence: the element and what was seen. Look for the weakest point first.
+- **No evidence, no score.** Whatever could not be seen (no browser, no dark mode, a state that never showed), name as not checked; never fill it in from the code or from memory.
+- **Pass** is a 4 or higher on every criterion. Below that, fix and score again. After three rounds, stop and hand the last scores to the user; the call is theirs.
+
 ## Report
 
 When you hand work back, say in a few lines:
 
 - what you reworked, and what you left alone on purpose;
-- which of the 20 principles you checked and which, if any, you could not meet and why;
-- what you verified by looking (widths, light and dark, overflow) and what you assumed;
+- the review: the five scores with their evidence, who scored (a subagent or a separate pass), how many rounds it took, and anything not checked;
+- which principles, if any, you could not meet and why;
 - the tokens the user should change to make it their own.
