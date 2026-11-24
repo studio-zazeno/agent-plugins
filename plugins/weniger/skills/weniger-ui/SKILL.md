@@ -56,7 +56,7 @@ If the user's brand needs another accent, ground colour or typeface, change the 
 ### Measure: nothing looks placed by accident
 
 9. **Everything sits on a 4 px grid.** Spacing comes from 4, 8, 12, 16, 24, 32, 48, 64. Controls are 36, 40 or 44 high; touch targets at least 44 on phones.
-10. **Four text styles, no more.** Label, text, heading, number. Size and weight carry the hierarchy; capitals and colour do not.
+10. **Four text styles, no more.** Label, text, heading, number. Size and weight carry the hierarchy; capitals and colour do not. Text that people read at length is set for reading, not for a control.
 11. **Content never moves its frame.** Numbers are tabular. Text may wrap or truncate with an ellipsis. Nothing overflows its card or pushes a neighbour. Size against the page or container, never the browser window.
 12. **One stroke weight.** The same weight for every icon and line. Hairlines divide rows; empty space alone does not.
 
@@ -125,7 +125,7 @@ Focus is shown by a ring, never by colour alone: `:focus-visible{ outline:2px so
 
 If the site has no dark switch, follow the system: put the same dark values inside `@media (prefers-color-scheme: dark){ :root{ … } }`.
 
-Text styles: label 12/16 medium, text 13/18 semibold, heading 15/20 semibold, number 32/36 semibold with `font-feature-settings:'tnum'`.
+Text styles: label 12/16 medium, text 13/18 semibold, heading 15/20 semibold, number 32/36 semibold with `font-feature-settings:'tnum'`. On controls and in tiles, text is 13/18 semibold. In running copy (an article, a description, help text of more than a line or two) the same style is set for reading: 16/24 regular, lines no longer than about 70 characters.
 
 ## Motion starter
 
