@@ -116,6 +116,8 @@ If the user's brand needs another accent, ground colour or typeface, change the 
 }
 ```
 
+Focus is shown by a ring, never by colour alone: `:focus-visible{ outline:2px solid var(--accent); outline-offset:2px }`. It appears for the keyboard only, follows the radius, and sits on the surface around the control, where the accent keeps 3:1 in light and dark.
+
 If the site has no dark switch, follow the system: put the same dark values inside `@media (prefers-color-scheme: dark){ :root{ … } }`.
 
 Text styles: label 12/16 medium, text 13/18 semibold, heading 15/20 semibold, number 32/36 semibold with `font-feature-settings:'tnum'`.
