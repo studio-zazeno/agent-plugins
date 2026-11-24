@@ -20,6 +20,8 @@ Check these first. If one fails, fix it before anyone scores the page.
 - Spacing on the 4 px grid: 4, 8, 12, 16, 24, 32, 48, 64.
 - No `vw` units inside a component.
 - A `prefers-reduced-motion` rule wherever there is motion.
+- Every control shows a visible focus ring when reached with the keyboard.
+- Text contrast at least 4.5:1, or 3:1 for text from 24 px (19 px bold), in light and dark. Text on the accent included.
 - No serious or critical accessibility issues, in light and dark.
 
 ## Quality bar
