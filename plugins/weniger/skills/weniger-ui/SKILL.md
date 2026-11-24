@@ -95,7 +95,7 @@ If the user's brand needs another accent, ground colour or typeface, change the 
   --raise-a:#FFFFFF; --raise-b:#F6F4EE;     /* raised control */
   --sunk-a:#D9D6CE;  --sunk-b:#E3E1DA;      /* sunk well */
   --fg:#161614; --mu:#5F5D56; --line:rgba(74,62,40,.14);
-  --accent:#EE5A1B; --ok:#4FA36A;
+  --accent:#EE5A1B; --on-accent:#161614; --ok:#4FA36A;
   /* shadows, tinted warm */
   --sh-raise: inset 0 1px 0 #fff, 0 0 0 1px rgba(74,62,40,.07),
               0 1px 2px rgba(74,62,40,.09), 0 5px 9px -5px rgba(74,62,40,.22);
@@ -110,11 +110,14 @@ If the user's brand needs another accent, ground colour or typeface, change the 
   --raise-a:#4A4944; --raise-b:#3A3935;
   --sunk-a:#0E0E0D;  --sunk-b:#171716;
   --fg:#F3F1EB; --mu:#A6A39A; --line:rgba(255,255,255,.08);
+  --on-accent:#161614;
   --sh-raise: inset 0 1px 0 rgba(255,255,255,.14), 0 0 0 1px rgba(0,0,0,.4),
               0 1px 2px rgba(0,0,0,.35), 0 5px 9px -5px rgba(0,0,0,.7);
   --sh-sunk:  inset 0 1px 2px rgba(0,0,0,.7), 0 1px 0 rgba(255,255,255,.06);
 }
 ```
+
+Text and icons on the accent use `--on-accent`: dark, not white. White on this orange is 3.4:1 and fails for normal text; dark is 5.3:1.
 
 Focus is shown by a ring, never by colour alone: `:focus-visible{ outline:2px solid var(--accent); outline-offset:2px }`. It appears for the keyboard only, follows the radius, and sits on the surface around the control, where the accent keeps 3:1 in light and dark.
 
